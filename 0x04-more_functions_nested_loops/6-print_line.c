@@ -2,6 +2,7 @@
 
 /**
  * print_line - prints a line
+ * @n: number of times the character _ shuld be printed
  */
 void print_line(int n)
 {
@@ -9,7 +10,6 @@ void print_line(int n)
 	{
 		_putchar('\n');
 	}
-
 	else
 	{
 		int i;
