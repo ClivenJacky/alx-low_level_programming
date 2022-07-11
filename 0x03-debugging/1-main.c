@@ -1,7 +1,7 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - causes an infinite loop
+ * main - tests function that prints if integer is positive or negetive
  * Return: 0
  */
 
@@ -9,16 +9,9 @@ int main(void)
 {
 	int i;
 
-	printf("Infinite loop incoming :(\n");
-
 	i = 0;
+	positive_or_negetive(i);
 
-	/*while (i < 10)*/
-	/*{*/
-	/*	putchar(i);*/
-	/*}*/
 
-	printf("Infinite loop avoided! \\o/\n");
-
-	return (0);
+return (0);
 }
