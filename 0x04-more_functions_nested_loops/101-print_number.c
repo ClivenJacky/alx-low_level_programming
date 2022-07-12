@@ -22,6 +22,12 @@ void print_number(int n)
 
 	m = 1;
 	c = 1;
+	while (c)
+	{
+		if (num / (m * 10) > 0)
+			m *= 10;
+		else c = 0
+	}
 
 	while (num >= 0)
 	{
