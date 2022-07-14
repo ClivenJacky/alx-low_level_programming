@@ -7,7 +7,7 @@
  *
  * Return: char value
  */
-char *cap_string(char *s)
+char *cap_string(char *n)
 {
 	int i, x;
 	int cap = 32;
