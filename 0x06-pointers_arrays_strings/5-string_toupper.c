@@ -6,18 +6,15 @@
  *
  * Return: char var
  */
-char *string_toupper(char *p)
+char *string_toupper(char *s)
 {
-	int a = 0;
+	int i;
 
-	while (p[a])
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (p[a] >= 97 && p[a] <= 122)
-		{
-			p[a] -=32;
-		}
-
-		a++;
+		if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] = s[i] - 32;
 	}
-	return (p)
+
+	return (s);
 }
