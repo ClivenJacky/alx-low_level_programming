@@ -9,25 +9,27 @@
  */
 char *cap_string(char *s)
 {
-	int a = 0;
-	int i;
-	int cspc = 13;
-	char spc[] = {32, '\t', '\n', 44, ';', 46, '!', '?', '"', '(', ')', '{', '}'};
+	int i, x;
+	int cap = 32;
+	int sep[] = {',', ';', '.', '?', '"', '(', ')', '{', '}', ' ', '\n', '\t'};
 
-	while (s[a])
+	for (i = 0; n[i] != '\0'; i++)
 	{
-		i = 0;
-
-		while (i < cspc)
+		if (n[i] >= 'a' && n[i] <= 'z')
 		{
-			if ((a == 0 || s[a - 1] == spc[i]) && (s[a] >= 97 && s[a] <= 122))
-				s[a] -=32;
-
-			i++;
+			n[i] = n[i] - cap;
 		}
 
-		a++;
-	}
+		cap = 0;
 
-	return (s);
+		for (x = 0; x <= 12; x++)
+		{
+			if (n[i] == sep[x])
+			{
+				x = 12;
+				cap = 32;
+			}
+		}
+	}
+	return (n);
 }
