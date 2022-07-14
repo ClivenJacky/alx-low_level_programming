@@ -1,50 +1,57 @@
 #include "main.h"
 
 /**
- * _strcmp - Compares two strings
- * @s1: The first string
- * @s2: The second string
- *
- * Retuen: int value
+ * _strspn - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
  */
-int _strcmp(char *s1, char *s2)
+unsigned int _strspn(char *s, char *accept)
+
 {
-	int a = 0, b = 0, c = 0, r = 0, lim;
 
-	while (s1[a])
-	{
-		a++;
-	}
+		unsigned int i, n, value, check;
 
-	while (s2[b])
-	{
-		b++;
-	}
 
-	if (a <= b)
-	{
-		lim = a;
-	}
-	else
-	{
-		lim = b;
-	}
 
-	while (c <= lim)
-	{
-		if (s1[c] == s2[c])
-		{
-			c++;
-			continue;
-		}
-		else
-		{
-			r = s1[c] - s2[c];
-			break;
-		}
+			value = 0;
 
-		c++;
-	}
 
-	return (r);
+
+				for (i = 0; s[i] != '\0'; i++)
+
+						{
+
+									check = 0;
+
+
+
+											for (n = 0; accept[n] != '\0'; n++)
+
+														{
+
+																		if (accept[n] == s[i])
+
+																						{
+
+																											value++;
+
+																															check = 1;
+
+																																		}
+
+																				}
+
+
+
+													if (check == 0)
+
+																	return (value);
+
+														}
+
+
+
+					return (value);
+
 }
