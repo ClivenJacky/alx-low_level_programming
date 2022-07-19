@@ -8,14 +8,13 @@
  *
  * Return: the memory area filled
  */
-char *_memset(char *s, char b, unsigned int n)
+void *_memset(void *s, int c, size_t n)
 {
-	unsigned int a;
+	unsigned int index;
+	unsigned char *memoey = s, value = c;
 
-	for (a = 0; a < n; a++)
-	{
-		s[a] = b;
-	}
+	for (index = 0; index < n; index++)
+		memory[index] = value;
 
-	return (s);
+	return (memory);
 }
