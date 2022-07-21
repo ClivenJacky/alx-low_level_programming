@@ -15,7 +15,10 @@ int _sqrt_recursion(int n)
 }
 /**
  * squareroot - checks if perfect square
- */
+ * @n: input
+ * @i: counter
+ * Return: if squareroot
+*/
 int squareroot(int n, int i)
 {
 	if (i < 1)
