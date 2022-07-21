@@ -5,7 +5,8 @@
  * wildcmp - entry point
  * @s1: input
  * @s2: input
- * Return: 0
+ *
+ * Return: 1 if considered identical, 0 otherwise
  */
 int wildcmp(char *s1, char *s2)
 {
@@ -20,4 +21,5 @@ int wildcmp(char *s1, char *s2)
 		if (wildcmp(s1 + 1, s2) || wildcmp(s1, s2 + 1))
 			return (1);
 	}
+	return (0);
 }
